@@ -1,0 +1,61 @@
+site_name: TokiDAO API Documentation
+site_description: Technical documentation for the TokiDAO FastAPI backend.
+site_author: The TokiDAO Team
+
+repo_url: # Add your Git repository URL here if you have one
+edit_uri: # Add a link to edit pages if your repo is public, e.g., edit/main/docs/
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.annotate
+    - content.tabs.link
+  palette:
+    # Palette toggle for light/dark modes
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate 
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    logo: material/leaf # Example logo, can be changed
+
+# Extensions
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.details
+  - admonition
+  - toc:
+      permalink: true
+  - attr_list # Allows adding HTML attributes/CSS classes to markdown elements
+
+nav:
+  - 'Overview': 'index.md'
+  - 'Project Setup & Details': 
+    - 'Project Log': 'PROJECT.md'
+    - 'Dependencies': 'DEPENDENCIES.md'
+  - 'Development Guide':
+    - 'TODO List': 'TODO.md'
+    - 'Issues & Resolutions': 'ISSUES.md'
+  - 'API Reference': 
+    - 'Auto-generated (Swagger)': 'http://127.0.0.1:8000/docs' # Link to live API docs
+    - 'Auto-generated (ReDoc)': 'http://127.0.0.1:8000/redoc'
+  - 'Changelog': 'CHANGELOG.md'
+
+# Copyright
+copyright: Copyright &copy; 2024 The TokiDAO Team
